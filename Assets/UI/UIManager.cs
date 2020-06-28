@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UIMenu : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     public void ClickOnCredits()
     {
@@ -16,5 +16,9 @@ public class UIMenu : MonoBehaviour
     public void ClickOnQuit()
     {
         Application.Quit();
+    }
+    public void ClickOnMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
