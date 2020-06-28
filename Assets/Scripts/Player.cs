@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     float targetFPS = 60; // Temporary variable
     public GameObject bullet;
     int offsetY = 20;
+    
 
     void Start()
     {
@@ -21,9 +22,10 @@ public class Player : MonoBehaviour
         float v = Input.GetAxis("Vertical");
         movement = new Vector3(h, v, 0) * movementSpeed * targetFPS;
         transform.position += movement * Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             Instantiate(bullet, new Vector3(transform.position.x, transform.position.y + offsetY, 0), Quaternion.identity);
         }
+
     }
 }
