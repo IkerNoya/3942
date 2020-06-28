@@ -8,10 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Text scoreText;
-
-    int energy = 3;
-    int bombAmmo = 3;
-    int score = 0;
+    public int score = 0;
     static GameManager instance = null;
     public static GameManager Get()
     {
@@ -45,8 +42,6 @@ public class GameManager : MonoBehaviour
     }
     public void ResetValues()
     {
-        energy = 3;
-        bombAmmo = 3;
         score = 0;
     }
     private void OnDisable()
